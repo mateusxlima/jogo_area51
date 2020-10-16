@@ -1,6 +1,6 @@
 
 import pygame, time
-# COMENTARIO ADD APENAS PARA TESTE DO GIT
+
 # AQUI SÃO DEFINIDAS AS CORES QUE SERÃO USADAS POSTERIORMENTE
 class cor():
 
@@ -30,10 +30,10 @@ class objeto():
 
 # NESTA CLASSE AS VARIAVEIS RECEBEM OS ARQUIVOS QUE SERÃO USADOS
 class arq():
-    fundo = pygame.image.load('/home/mateus/Documentos/scripts/python/area51/ovni_fundo.png')
-    freira = pygame.image.load('/home/mateus/Documentos/scripts/python/area51/freira_susto.jpg')
-    freira_fim = pygame.image.load('/home/mateus/Documentos/scripts/python/area51/freira_fim.jpg')
-    nave = pygame.image.load('/home/mateus/Documentos/scripts/python/area51/ovni.png')
+    fundo = pygame.image.load('./ovni_fundo.png')
+    freira = pygame.image.load('./freira_susto.jpg')
+    freira_fim = pygame.image.load('./freira_fim.jpg')
+    nave = pygame.image.load('./ovni.png')
 
 # FUNÇÃO QUE RENDERIZA A IMAGEM DE FUNDO DO JOGO
 def img_fundo():
@@ -65,19 +65,19 @@ def freira_fim():
 
 def som_fundo():
 
-    pygame.mixer.music.load('/home/mateus/Documentos/scripts/python/area51/toque_fundo.mp3')
+    pygame.mixer.music.load('./toque_fundo.mp3')
     pygame.mixer.music.play(3)
 
 
 def som_piano():
 
-    pygame.mixer.music.load('/home/mateus/Documentos/scripts/python/area51/piano.mp3')
+    pygame.mixer.music.load('./piano.mp3')
     pygame.mixer.music.play()
 
 
 def grito():
 
-    pygame.mixer.music.load('/home/mateus/Documentos/scripts/python/area51/toque_grito.mp3')
+    pygame.mixer.music.load('./toque_grito.mp3')
     pygame.mixer.music.play()
 
 # NAS PROXIMAS LINHAS A TELA E A SURFACE SÃO CRIADAS, TAMBÉM É CRIADA A STRINGS QUE SERA EXIBIDA
@@ -109,7 +109,7 @@ while sair == True:
         if event.type == pygame.QUIT:
             sair = False
 
-    relogio.tick(30)
+    relogio.tick(50)
     img_fundo()
 
     # AQUI É CRIADO O CENARIO, CHAMANDO OS OBJETOS
